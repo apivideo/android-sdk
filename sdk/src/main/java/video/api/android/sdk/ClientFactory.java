@@ -30,13 +30,11 @@ import video.api.android.sdk.infrastructure.volley.Videos;
 
 public class ClientFactory {
     public Client create(Context context, String apiKey) {
-        //return create(context, "https://ws.api.video", apiKey);
-        return create(context, "https://ws-staging.api.video", apiKey);
+        return create(context, "https://ws.api.video", apiKey);
     }
 
     public Client createSandbox(Context context, String apiKey) {
-        //return create(context, "https://sandbox.api.video", apiKey);
-        return create(context, "https://sandbox-staging.api.video", apiKey);
+        return create(context, "https://sandbox.api.video", apiKey);
     }
 
     private Client create(Context context, String baseUri, String apiKey) {
