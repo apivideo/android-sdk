@@ -3,27 +3,32 @@ The [api.video](https://api.video/) web-service helps you put video on the web w
 This documentation helps you use the corresponding ANDROID client.
 This is an early version, feel free to report any issue.
 
-## Install
+## Installation
 
-### With Gradle
+### As a local jar with Gradle
 
-1. Download the [latest release]().
-2. Add the following dependencies in your `build.gradle` file:
+1. Download the [latest release](https://github.com/apivideo/android-sdk/releases) of the aar file.
+2. Copy it into a `libs/` directory in you project.
+3. Add the following dependencies in your `build.gradle` file:
 
 ```gradle
 // build.gradle
 dependencies {
-
+    // Replace android-sdk-x.x.x.aar with the name of the latest release
+    runtime files('libs/android-sdk-x.x.x.aar')
 }
 ``` 
 
 ### Quick start
 ```java 
+import video.api.android.sdk.Client;
+import video.api.android.sdk.ClientFactory;
+
 // Create client for Production and authenticate
-Client client = new ClientFactory().create(context, apiKey.getText().toString())
+Client client = new ClientFactory().create(getApplicationContext(), "YourProductionApiKey")
 
 // Create client for Sandbox and authenticate
-Client client = new ClientFactory().createSandbox(context, apiKey.getText().toString())
+Client client = new ClientFactory().createSandbox(getApplicationContext(), "YourSandboxApiKey")
 
 // Create and upload a video resource from local drive
 client.videos.upload("/path/to/video.mp4", new ResponseListener<Video>() {
