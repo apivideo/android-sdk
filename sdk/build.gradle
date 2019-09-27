@@ -18,7 +18,12 @@ android {
 
     libraryVariants.all { variant ->
         variant.outputs.each { output ->
-            output.outputFileName = "${variant.name}-${defaultConfig.versionName}.aar"
+            if (variant.name == 'release') {
+                output.outputFileName = "${rootProject.name}-${defaultConfig.versionName}.aar"
+            }
+            else {
+                output.outputFileName = "${rootProject.name}-${variant.name}-${defaultConfig.versionName}.aar"
+            }
         }
     }
 
