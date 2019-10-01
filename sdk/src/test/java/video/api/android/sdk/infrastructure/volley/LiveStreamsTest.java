@@ -25,7 +25,7 @@ public class LiveStreamsTest {
     public void create() throws JSONException {
         LiveStream liveStream = new LiveStream();
         liveStreams.create(liveStream, null, null);
-        assertTrue(requestExecutor.getRequestBuilder().getUrl().endsWith("/liveStream-streams"));
+        assertTrue(requestExecutor.getRequestBuilder().getUrl().endsWith("/live-streams"));
         assertEquals(requestExecutor.getRequestBuilder().getMethod(), Request.Method.POST);
     }
 
@@ -34,7 +34,7 @@ public class LiveStreamsTest {
         LiveStream liveStream = new LiveStream();
         liveStream.setLiveStreamId("liveSuccess");
         liveStreams.update(liveStream, null, null);
-        assertTrue(requestExecutor.getRequestBuilder().getUrl().endsWith("/liveStream-streams/" + liveStream.getLiveStreamId()));
+        assertTrue(requestExecutor.getRequestBuilder().getUrl().endsWith("/live-streams/" + liveStream.getLiveStreamId()));
         assertEquals(requestExecutor.getRequestBuilder().getMethod(), Request.Method.PATCH);
     }
 

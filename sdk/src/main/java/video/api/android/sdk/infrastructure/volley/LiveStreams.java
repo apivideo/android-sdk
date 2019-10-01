@@ -42,7 +42,7 @@ public class LiveStreams implements LiveStreamClient, PageLoader<LiveStream> {
                     }
                 })
                 .setMethod(Request.Method.POST)
-                .setUrl("/liveStream-streams")
+                .setUrl("/live-streams")
                 .setErrorListener(error -> {
                     if (error.networkResponse.statusCode >= 500) {
                         responseErrorListener.onErrorResponse(new ServerException("ServerException " + error.networkResponse.statusCode, error));
@@ -63,7 +63,7 @@ public class LiveStreams implements LiveStreamClient, PageLoader<LiveStream> {
                     }
                 })
                 .setMethod(Request.Method.PATCH)
-                .setUrl("/liveStream-streams/" + liveStream.getLiveStreamId())
+                .setUrl("/live-streams/" + liveStream.getLiveStreamId())
                 .setErrorListener(error -> {
                     if (error.networkResponse.statusCode >= 500) {
                         responseErrorListener.onErrorResponse(new ServerException("ServerException " + error.networkResponse.statusCode, error));

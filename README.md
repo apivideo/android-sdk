@@ -269,7 +269,7 @@ Pager<Player> pager = client.players.list();
  *********************************
 */
 
-// Show a livestream
+// Show a live stream
 client.liveStreams.get(liveStreamId, liveStream -> Log.d("liveName",liveStream.getName()),
         error -> Log.d("error", error.getMessage()));
         
@@ -478,7 +478,7 @@ Most of _api.video_ features are implemented and autocomplete friendly within yo
 
 ```java 
 client.videos; // https://docs.api.video/5.1/videos
-client.liveStreams; // https://docs.api.video/5.1/liveStream
+client.liveStreams; // https://docs.api.video/5.1/live
 client.captions; // https://docs.api.video/5.1/captions
 client.players; // https://docs.api.video/5.1/players
 client.account; // https://docs.api.video/5.1/account
