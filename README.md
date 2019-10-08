@@ -14,8 +14,10 @@ This is an early version, feel free to report any issue.
 ```gradle
 // build.gradle
 dependencies {
+    // VolleyPlus is the underlying HTTP client
+    implementation 'dev.dworks.libs:volleyplus:0.1.4'
     // Replace android-sdk-x.x.x.aar with the name of the latest release
-    runtime files('libs/android-sdk-x.x.x.aar')
+    implementation files('libs/android-sdk-x.x.x.aar')
 }
 ``` 
 
