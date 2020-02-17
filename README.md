@@ -1,7 +1,5 @@
 # api.video ANDROID SDK
-The [api.video](https://api.video/) web-service helps you put video on the web without the hassle. 
-This documentation helps you use the corresponding ANDROID client.
-This is an early version, feel free to report any issue.
+The [api.video](https://api.video/) service helps you put video online without the hassle. This documentation helps you use the corresponding Android client. This is an early version, feel free to report any issue.
 
 ## Installation
 
