@@ -1,6 +1,11 @@
 ![](https://github.com/apivideo/API_OAS_file/blob/master/apivideo_banner.png)
+
+# DEPRECATED: Please use our [Kotlin SDK](https://github.com/apivideo/android-kotlin-sdk)
+
+
 # api.video ANDROID SDK
 The [api.video](https://api.video/) service helps you put video online without the hassle. This documentation helps you use the corresponding Android client. This is an early version, feel free to report any issue.
+
 
 ## Installation
 
